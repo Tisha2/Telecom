@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+
+\usepackage[cp1251]{inputenc}  %% 1
+\usepackage[T2A]{fontenc}      %% 2
+\usepackage[russian]{babel}    %% 3
+
+\usepackage{graphicx}
+\graphicspath{}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+
+\usepackage{pscyr}
+\voffset = 0pt
+\topmargin = 0pt
+ \headsep = 0pt
+
+\setlength{\textheight}{45\baselineskip}
+\setlength{\textheight}{\baselinestretch\textheight}
+\addtolength{\textheight}{\topskip}
+
+\begin{document}
+\thispagestyle{empty}
+
+\centerline{Телекоммуникационные технологии}
+
+
+\vspace{30ex}
+
+\centerline{\huge{Отчет по лабораторной работе № 11}}
+\vspace{1ex}
+\centerline{\Large{Тема:}}
+\vspace{1ex}
+\centerline{\LARGE\textbf{Модуляция и выборка (квантование)}}
+\vspace{15ex}
+
+\centerline{\LARGE{Самсонов Сергей}}
+\vspace{54ex}
+\centerline{2021}
+
+\textit{Упражнение 11}\\
+\textbf{Задание:} Выше показано, что при взятии выборок из сигнала при слишком низкой
+частоте кадров составляющие, большие частоты заворота дадут биения. В таком случае эти
+компоненты не отфильтруешь, поскольку они неотличимы от более низких частот.
+Полезно отфильтровать эти частоты до выборки; фильтр НЧ, используемый для этой
+цели, называется фильтр сглаживания.\\
+Вернитесь к примеру «Соло на барабане», примените фильтр НЧ до выборки, а затем,
+опять же с помощью фильтра НЧ, удалите спектральные копии, вызванные выборкой.
+Результат должен быть идентичен отфильтрованному сигналу.\\
+\textbf{Решение:} chap11s.ipynb\\
+\textbf{Заключение:}
+\begin{figure}[h!]
+	\center{\includegraphics[scale=0.6]{1.png}}
+\end{figure}
+
+Спектры «Cоло на барабане» (вверху), серия (пачка) импульсов (вторая строка),
+выборки из сигнала (третья строка) и результат после фильтра НЧ (внизу,
+масштабированный результат).\\
+Разница между спектром до и после выборки: 1.3642420526593924e -12 .
+
+
+
+\end{document}

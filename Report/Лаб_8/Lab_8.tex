@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+
+\usepackage[cp1251]{inputenc}  %% 1
+\usepackage[T2A]{fontenc}      %% 2
+\usepackage[russian]{babel}    %% 3
+
+\usepackage{graphicx}
+\graphicspath{}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+
+\usepackage{pscyr}
+\voffset = 0pt
+\topmargin = 0pt
+ \headsep = 0pt
+
+\setlength{\textheight}{45\baselineskip}
+\setlength{\textheight}{\baselinestretch\textheight}
+\addtolength{\textheight}{\topskip}
+
+\begin{document}
+\thispagestyle{empty}
+
+\centerline{Телекоммуникационные технологии}
+
+
+\vspace{30ex}
+
+\centerline{\huge{Отчет по лабораторной работе № 8}}
+\vspace{1ex}
+\centerline{\Large{Тема:}}
+\vspace{1ex}
+\centerline{\LARGE\textbf{Фильтрация и свертка}}
+\vspace{15ex}
+
+\centerline{\LARGE{Самсонов Сергей}}
+\vspace{54ex}
+\centerline{2021}
+
+\textit{Упражнение 8.1}\\
+\textbf{Задание:} Блокнот для этой главы - chapO8. ipynb. Прочитайте его и запустите код.
+В нем есть интерактивный виджет, где можно экспериментировать с параметрами
+гауссова окна и изучить их влияние на частоту среза.\\
+Что случится, если при увеличении ширины гауссова окна std не увеличивать число
+элементов в окне м?\\
+\textbf{Решение:} chap08.ipynb.\\
+\textbf{Заключение:} Увеличение ширины гауссова окна std приводит к появлению лепестков.
+\\
+\begin{figure}[h!]
+	\center{\includegraphics[scale=0.7]{1.png}}
+\end{figure}\\
+\textit{Упражнение 8.2}\\
+\textbf{Задание:} В этой главе утверждается, что преобразование Фурье гауссовой кривой - также
+гауссова кривая. Для дискретного преобразования Фурье это сотношение приблизительно
+верно.\\
+Попробуйте его на нескольких примерах. Что происходит с преобразованием Фурье, если
+меняется std?\\
+\textbf{Решение:} chap08.ipynb, chap08s.ipynb.\\
+\textbf{Заключение:} Явно прослеживается обратная связь между временем и частотой.\\
+\begin{figure}[h!]
+	\center{\includegraphics[scale=0.4]{2.png}}
+\end{figure}\\
+\textit{Упражнение 8.3}\\
+\textbf{Задание: }В дополнение к Гауссову окну, использованному в этой главе, создайте окно
+Хемминга тех же размеров. Дополните окно нулями и напечатайте его ДПФ.\\
+Какое окно больше подходит для фильтра НЧ? Полезно напечатать ДПФ с
+логарифмическим масштабом по у.\\
+Поэкспериментируйте с разными окнами и разными размерами этих окон.\\
+\textbf{Решение:} См. chap08s.ipynb.\\
+\textbf{Заключение:} В логарифмическом масштабе мы видим, что Хэмминг и Хэннинг сначала
+падают быстрее, чем два других. А окна Хэмминга и Гаусса, похоже, имеют самые стойкие
+боковые лепестки. Окно Ханнинга больше подходит для фильтра НЧ, поскольку может
+иметь наилучшее сочетание быстрого сброса и минимальных 
+\begin{figure}[h!]
+	\center{\includegraphics[scale=0.4]{3.png}}
+\end{figure}\\
+\end{document}

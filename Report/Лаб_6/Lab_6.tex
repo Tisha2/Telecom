@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+
+\usepackage[cp1251]{inputenc}  %% 1
+\usepackage[T2A]{fontenc}      %% 2
+\usepackage[russian]{babel}    %% 3
+
+\usepackage{graphicx}
+\graphicspath{}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+
+\usepackage{pscyr}
+\voffset = 0pt
+\topmargin = 0pt
+ \headsep = 0pt
+
+\setlength{\textheight}{45\baselineskip}
+\setlength{\textheight}{\baselinestretch\textheight}
+\addtolength{\textheight}{\topskip}
+
+\begin{document}
+\thispagestyle{empty}
+
+\centerline{Телекоммуникационные технологии}
+
+
+\vspace{30ex}
+
+\centerline{\huge{Отчет по лабораторной работе № 6}}
+\vspace{1ex}
+\centerline{\Large{Тема:}}
+\vspace{1ex}
+\centerline{\LARGE\textbf{Дискретное косинусное преобразование}}
+\vspace{15ex}
+
+\centerline{\LARGE{Самсонов Сергей}}
+\vspace{54ex}
+\centerline{2021}
+
+\textit{Упражнение 6.1}\\
+\textbf{Задание: }Убедитесь в что analyzel требует времени пропорционально n 3 , a analyze2 -
+пропорционально n 2 , запуская их с несколькими разными массивами и засекая время рабо-
+ты.\\
+\textbf{Решение:} chap06s.ipynb.\\
+\textbf{Заключение:} На решения «гауссовского» и «белого» шумов analyzel затратил времени
+пропорционально не n 3 , а, соответственно, n 2.21 и n 2.17 (где n - число столбцов в М). Одна из
+возможностей, что степень не 3 заключается в том, что производительность "np.linalg.solve"
+почти квадратична в этом диапазоне размеров массива.
+Что касается analyze2 и dct-iv, то здесь степени 2.02 и 0.39, что и предполагалось.\\
+
+\textit{Упражнение 6.2}\\
+\textbf{Задание:} Реализуйте версию ДКП алгоритма сжатия и примените его для записи музыки
+или речи. Сколько компонент можно удалить до того, как разница станет заметной?\\
+\textbf{Решение:}Chap06s.ipynb.\\
+\textbf{Заключение: }Слушая восстановленный файл после сжатия до 90?, я не услышал
+отличия от оригинала настолько хорошо работает этот алгоритм.\\
+Спектрограмма голоса до сжатия
+\begin{figure}[h!]
+	\center{\includegraphics[scale=0.3]{1.png}}
+\end{figure}\\
+После сжатия
+\begin{figure}[h!]
+	\center{\includegraphics[scale=0.3]{2.png}}
+\end{figure}\\
+
+
+
+\textit{Упражнение 6.3}\\
+\textbf{Задание:} Прочтите phase.ipynb блокнот и «погоняйте» примеры. Выберите иной сегмент
+звука и повторите эксперименты. Можно ли найти некие общие соотношения в фазовой
+структуре звука и его восприятии?\\
+
+\textbf{Решение:} См. phase.ipynb.\\
+\textit{Заключение:} Обнуление фазового сдвига, кажется, создает звон для гобоя и саксофона.
+Для виолончели слышится движение смычка, а сам звук практически отсутствует.
+Вращение имеет небольшой эффект – ухо воспринимает звук как основной.
+Рандомизация добавляет придыхательное качество.\\
+
+\begin{figure}[h!]
+	\center{\includegraphics[scale=0.4]{3.png}}
+	\caption{Основной -
+		виолончель}
+\end{figure}
+
+\begin{figure}[h!]
+	\center{\includegraphics[scale=0.4]{4.png}}
+	\caption{Обнуленный}
+\end{figure}
+
+\begin{figure}[h!]
+	\center{\includegraphics[scale=0.4]{5.png}}
+	\caption{Вращение}
+\end{figure}
+
+\begin{figure}[h!]
+	\center{\includegraphics[scale=0.4]{6.png}}
+	\caption{Рандомизация}
+\end{figure}
+По крайней мере, для звуков, имеющих простую гармоническую структуру, кажется, что
+мы в основном "слепы по фазе"; то есть мы не слышим изменений в фазовой структуре при
+условии, что гармоническая структура неизменна.
+
+\end{document}
