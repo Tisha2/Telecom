@@ -1,0 +1,21 @@
+ID_пок_тель		Ф_И_О		WebSide
+
+
+(1, 'Багина Дарья Александровна',		 'https://vk.com/d.bagina2021'),
+(2, 'Лапшин Максим Андреевич',		'https://vk.com/maksim.lapshin'),
+(3, 'Таранцов Михаил Александрович',	'https://vk.com/mihailtarantsov'),
+(4, 'Волков Николай Юрьевич',		'https://vk.com/volkov_n_y'),
+(5, 'Останина Нина Александровна',		'https://vk.com/nina.ostanina'),
+(6, 'Ульянченко Иван Викторович',	'https://vk.com/deputat_ru'),
+(7, 'Гребенник Андрей Вадимович',	'https://t.me/grebenniklive'),
+(8, 'Обухов Сергей Павлович',		 'https://vk.com/spobuhov'),
+(9, 'Курганский Сергей Борисович',	'https://vk.com/skurganskiy'),
+(10,'Петров Виталий Владимирович',	'https://vk.com/vitalijpetrov'),
+(11, 'Суханов Игорь Владимирович',	'https://vk.com/igor_suhanov'),
+(12, 'Удальцова Анастасия Олеговна',	'https://vk.com/udaltsova'),
+(13, 'Парфёнов Денис Андреевич',	'https://vk.com/parfenov_denis'),
+(14, 'Гуличева Елена Геннадьевна',	'https://vk.com/id664620462'),
+(15, 'Звягинцев Пётр Семёнович',	 'https://vk.com/id403655628'),
+(16, 'Рашкин Валерий Фёдорович',	'https://kprf.ru/personal/rashkin'),
+(17, 'Лобанов Михаил Сергеевич',	'https://vk.com/mlobanov84'),
+(18, 'БураковВладимир Юрьевич',		'https://vk.com/burlakov')

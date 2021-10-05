@@ -1,0 +1,66 @@
+
+CREATE TABLE ЦЕНТР (
+	ID_ЦЕНТР	integer,
+	ЦЕНТР		varchar(60),
+	АДРЕС		varchar(100),
+	ТЕЛЕФОН		varchar(20)
+	);
+	
+INSERT INTO ЦЕНТР   VALUES
+
+CREATE TABLE ЖУРНАЛ_ПОСТАВОК (
+	ID_КОМПЛ	integer,
+	ID_ЦЕНТР	integer,
+	КОЛ			integer
+	);
+	
+CREATE TABLE КОМПЛЕКТАЦИЯ_ТС (
+	ID_КОМПЛ		integer,
+	МОДЕЛЬ			varchar(60),
+	ЦВЕТ			varchar(60),
+	ГОД_ВЫПУСКА		integer,
+	ОБЪЕМ_см3		integer,
+	МОЩНОСТЬ_л_с	integer
+	);		
+	
+
+CREATE TABLE ПОКУПКА (
+	ID_КУПЛЯ		integer,
+	ID_ПОК_ТЕЛЬ		integer,
+	ДАТА			varchar(20)
+		);
+		
+		
+INSERT INTO ПОКУПКА  VALUES
+	(1,		5,	'01.01.21'),
+	...
+
+	
+CREATE TABLE ЖУРНАЛ_ПОКУПКА (	
+	ID_КОМПЛ		integer,
+	ID_КУПЛЯ		integer,
+	КОЛ				real
+	);
+	
+INSERT INTO ЖУРНАЛ_ПОКУПКА  VALUES
+
+
+CREATE TABLE ПОКУПАТЕЛЬ (
+	ID_ПОК_ТЕЛЬ,
+	Ф_И_О,		
+	WebSide
+	);
+
+INSERT INTO ПОКУПАТЕЛЬ VALUES
+
+
+
+
+
+
+
+
+
+
+
+	
